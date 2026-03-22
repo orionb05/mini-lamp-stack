@@ -54,4 +54,5 @@ Send JSON bodies with the expected fields (login, password, userId, color, searc
 
 ### AI Usage
 - AI was used to help draft and format this README.md.
+- AI helped draft the UML diagrams for this project.
 - All code, configuration, and deployment steps were completed by the student following course materials.

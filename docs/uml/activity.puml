@@ -1,0 +1,32 @@
+@startuml
+start
+
+:Open index.html;
+:Enter Login + Password;
+
+:Call Login.php;
+if (Login Success?) then (yes)
+    :Load color.html;
+
+    repeat
+
+        if (Add Color?) then (yes)
+            :Enter Color Name;
+            :Call AddColor.php;
+        else (no)
+            if (Search Colors?) then (yes)
+                :Enter Color Name;
+                :Call SearchColors.php;
+                :Display Results;
+            else (no)
+                :No Action Performed;
+            endif
+        endif
+
+    repeat while (More actions?)
+else (no)
+    :Show Login Failure;
+endif
+
+stop
+@enduml

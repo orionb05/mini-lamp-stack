@@ -1,0 +1,43 @@
+@startuml
+
+class User {
+    +int ID
+    +string FirstName
+    +string LastName
+    +string Login
+    +string Password
+}
+
+class Color {
+    +int ID
+    +string Name
+    +int UserID
+}
+
+User "1" --> "0..*" Color : owns
+
+class AddColorAPI {
+    +addColor(userId, color)
+}
+
+class LoginAPI {
+    +login(login, password)
+}
+
+class SearchColorsAPI {
+    +searchColors(userId, searchTerm)
+}
+
+AddColorAPI --> Color : inserts >
+SearchColorsAPI --> Color : queries >
+LoginAPI --> User : authenticates >
+
+class Database {
+    +connect()
+}
+
+AddColorAPI --> Database : inserts >
+LoginAPI --> Database
+SearchColorsAPI --> Database : queries >
+
+@enduml

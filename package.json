@@ -1,8 +1,34 @@
 {
   "devDependencies": {
-    "eslint": "^9.0.0",
-    "htmlhint": "^1.1.4",
-    "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0"
-  }
+    "eslint": "^9.39.4",
+    "htmlhint": "^1.9.2",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "name": "mini-lamp-stack",
+  "version": "1.0.0",
+  "description": "A small web application that lets users log in, add colors associated with their account, and search previously added colors. It was built as a learning exercise for working with a classic LAMP stack.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:html": "htmlhint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orionb05/mini-lamp-stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/orionb05/mini-lamp-stack/issues"
+  },
+  "homepage": "https://github.com/orionb05/mini-lamp-stack#readme"
 }

@@ -183,3 +183,8 @@ function searchColor()
 	}
 	
 }
+
+// Allow Jest to import functions
+if (typeof module !== 'undefined') {
+    module.exports = { addColor, searchColor };
+}

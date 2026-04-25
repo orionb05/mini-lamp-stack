@@ -2,6 +2,9 @@
   "devDependencies": {
     "eslint": "^9.39.4",
     "htmlhint": "^1.9.2",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "node-fetch": "^3.3.2",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^36.0.1"
   },
@@ -13,11 +16,14 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint:html": "htmlhint .",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:js": "eslint .",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "repository": {
     "type": "git",

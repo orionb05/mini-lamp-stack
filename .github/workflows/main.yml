@@ -1,4 +1,4 @@
-name: Lint Web Files
+name: CI
 
 on:
   push:
@@ -24,3 +24,6 @@ jobs:
           npx htmlhint .
           npx stylelint "**/*.css"
           npx eslint .
+
+      - name: Run tests
+        run: npm test
